@@ -1,11 +1,10 @@
 html {
-  background-color: #282c34;
+  background-color: #282c34; 
+  font-size: 25px;
+  color: #97a0b9;
 }
 
 .App {
   text-align: center;
 }
 
-.backimg {
-  width: 
-}
