@@ -72,15 +72,12 @@ class App extends React.Component<{}> {
 
   loadSets = async (data: any) => {
     const info = await data;
-    const sets = info["sets"];
+    const sets = info["sets"].filter((el: any) => el !== "Promo" && el !== "System" && el !== "Debug");
+    console.log(sets);
     this.setState({
       sets: sets
     });
   }
-
-  loadTypes = () => {
-
-  };
 
   setTypes = () => {
     const cards = this.state.cards;
@@ -121,7 +118,7 @@ class App extends React.Component<{}> {
   render() {
     return (
       <React.Fragment>
-        <div className="App" style={{ display: "flex", flexDirection: "column", paddingLeft: "10%", paddingRight: "10%", alignItems: "center" }}>
+        <div className="App" style={{ display: "flex", flexDirection: "column", paddingLeft: "10%", paddingRight: "10%", alignItems: "center", margin: "10px" }}>
           <img src="https://s3-storage.textopus.nl/wp-content/uploads/2015/09/18031825/Hearthstone-iPhone-iPad.jpg" className="backimg" alt="logo" />
           <ExpansionPicker sets={this.state.sets} loadCards={this.loadCards} types={this.state.types} setTypesFilter={this.setTypesFilter} />
         </div>

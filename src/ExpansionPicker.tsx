@@ -4,8 +4,8 @@ class ExpansionPicker extends React.Component<any> {
 
   render() {
     return (
-      <React.Fragment>
-        <select onChange={this.props.loadCards} style={{ width: "200px", marginTop: "10px" }}>
+      <div style={{ position: "relative", bottom: "100px" }}>
+        <select onChange={this.props.loadCards} style={{ width: "200px" }}>
           <option value="none">Choose Card Set</option>
           {Array.from(this.props.sets).map((el: any) => {
             return (
@@ -13,7 +13,7 @@ class ExpansionPicker extends React.Component<any> {
             );
           })}
         </select>
-        <select onChange={this.props.setTypesFilter}>
+        <select onChange={this.props.setTypesFilter} style={{ marginBottom: "10px" }}>
           <option value="all">All</option>
           {Array.from(this.props.types).map((el: any) => {
             return (
@@ -21,7 +21,7 @@ class ExpansionPicker extends React.Component<any> {
             );
           })}
         </select>
-      </React.Fragment>
+      </div>
     );
   }
 }
