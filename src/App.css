@@ -1,10 +1,42 @@
 html {
-  background-color: #282c34; 
+  background-color: #282c34;
   font-size: 25px;
   color: #ffffff;
 }
 
-.App {
-  text-align: center;
+.appHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.expansionPicker {
+  position: relative;
+  bottom: 50px;
+}
+
+.appHeader img {
+  width: 900px;
+}
+
+@media only screen and (max-width: 900px) {
+  .appHeader img {
+    width: 100%;
+  }
+}
+
+.card {
+  width: 300px;
+  font-family: serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
